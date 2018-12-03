@@ -11,15 +11,27 @@
     "module": "es2015",
     "moduleResolution": "node",
     "sourceMap": true,
-    "target": "es5"
+    "target": "es5",
+    "baseUrl": "./src",
+    "paths": {
+      "@addon/*": ["addon/*"],
+      "@app/*": ["app/*"],
+      "@classes/*": ["classes/*"],
+      "@core/*": ["core/*"],
+      "@providers/*": ["providers/*"],
+      "@components/*": ["components/*"],
+      "@directives/*": ["directives/*"],
+      "@pipes/*": ["pipes/*"]
+    },
+    "typeRoots": [
+      "node_modules/@types"
+    ]
   },
   "include": [
     "src/**/*.ts"
   ],
   "exclude": [
-    "node_modules",
-    "src/**/*.spec.ts",
-    "src/**/__tests__/*.ts"
+    "node_modules"
   ],
   "compileOnSave": false,
   "atom": {
